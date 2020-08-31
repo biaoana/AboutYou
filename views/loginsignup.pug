@@ -1,0 +1,41 @@
+extends layout.pug
+block content 
+    style
+        include css/loginsignup.css
+    .login-wrap
+        
+        .login-html
+            input#tab-1.sign-in(type='radio' name='tab' checked='')
+            label.tab(for='tab-1') Sign In
+            input#tab-2.sign-up(type='radio' name='tab')
+            label.tab(for='tab-2') Sign Up
+            .login-form
+                .sign-in-htm
+                    form(action='/accountlogin' method='post')
+                        .group
+                            label.label(for='user' ) Email
+                                input#user.input(type='text' name='email')
+                        .group
+                            label.label(for='pass') Password
+                                input#pass.input(type='password' data-type='password' name='password')
+                        .group
+                            input.button(type='submit' value='Sign In')
+                        p=error
+                    .hr
+                .sign-up-htm
+                    form(action='/createaccount' method='post')
+                        .group
+                            label.label(for='user' ) Name
+                                input#user.input(type='text' name='name' )
+                        .group
+                            label.label(for='pass') Password
+                                input#pass.input(type='password' name='password' data-type='password')
+                        .group
+                            label.label(for='pass') Email Address
+                                input#pass.input(type='text' name='email')
+                        .group
+                            input.button(type='submit' value='Sign Up')
+                    .hr
+                    .foot-lnk
+                    label(for='tab-1')
+                        | Already Member?

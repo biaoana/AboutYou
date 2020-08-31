@@ -1,0 +1,19 @@
+doctype html
+html 
+    head 
+        title About you
+        style
+            include css/header.css
+            include css/categories.css
+            include css/search.css
+            include css/details.css
+        link(rel='stylesheet' href='https://www.w3schools.com/w3css/4/w3.css')
+
+    body
+        include includes/header
+        block content
+script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js")
+script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js")
+script
+    include JS/loginsignup.js
+    include JS/application.js

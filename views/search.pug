@@ -1,0 +1,19 @@
+extends layout.pug
+block content
+    
+    .searched-item
+        each item in items
+            .item
+                p #{item.name}
+                .productImage
+                    img(src=`/images/${item.image_groups[2].images[0].link}`)
+                .productDescription
+                    p #{item.page_description}
+                .action
+                    p Price: #{item.currency} #{item.price} 
+                    a(href=`/id=${item.id}`) More Info 
+    .more 
+        a.moreResults(data-url=`${url}`) More Results
+           
+
+    
